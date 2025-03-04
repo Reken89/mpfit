@@ -18,7 +18,7 @@ class UpdateProductTest extends TestCase
             'name'        => 'Ботинки Camelot',
             'description' => 'Ботинки из кожи',
             'category'    => 3,
-            'price'       => 12000,
+            'price'       => 9900,
         ]);
         
         $response->assertStatus(200);
