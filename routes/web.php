@@ -8,6 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Роуты для товара (Отображение, обновление, добавление, удаление)
 Route::patch('/products/update', [ProductController::class, 'ProductUpdate']);
 Route::delete('/products/delete', [ProductController::class, 'ProductDelete']);
 Route::post('/products/add', [ProductController::class, 'ProductAdd']);
@@ -16,6 +17,7 @@ Route::get('/detailing/table', [ProductController::class, 'DetailingTable']);
 Route::get('/products/detailing{id}', [ProductController::class, 'DetailingView'])->name('detailing');
 Route::get('/products', [ProductController::class, 'ProductView'])->name('products');
 
+//Роуты для заказов (Отображение, добавление, обновление)
 Route::post('/orders/add', [OrderController::class, 'OrderAdd']);
 Route::patch('/orders/update', [OrderController::class, 'OrderUpdate']);
 Route::get('/orders/table', [OrderController::class, 'OrderTable']);

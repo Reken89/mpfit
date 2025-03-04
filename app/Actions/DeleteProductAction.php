@@ -16,8 +16,7 @@ class DeleteProductAction
     public function DeleteProduct(ProductDeleteDto $dto): bool
     {   
         $delete = Product::where('id', $dto->id)
-            ->delete();  
-        
+            ->delete();          
         return $delete == true ? true : false;
     }
 }

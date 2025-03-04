@@ -21,8 +21,7 @@ class UpdateProductAction
                 'description' => $dto->description,
                 'category_id' => $dto->category,
                 'price'       => $dto->price,
-            ]);
-        
+            ]);      
         return $result == true ? true : false;
     }
 }

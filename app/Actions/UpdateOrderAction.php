@@ -18,8 +18,7 @@ class UpdateOrderAction
         $result = Order::find($dto->id)
             ->update([                
                 'status' => 'выполнен',
-            ]);
-        
+            ]);        
         return $result == true ? true : false;
     }
 }
